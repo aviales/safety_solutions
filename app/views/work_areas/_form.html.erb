@@ -1,0 +1,29 @@
+<%= form_with(model: work_area) do |form| %>
+  <% if work_area.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work_area.errors.count, "error") %> prohibited this work_area from being saved:</h2>
+
+      <ul>
+        <% work_area.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div >
+    <h5 style="color:white"><strong>Puts work areas info:</strong></h5>
+  </div>
+  <div class="field" style="color:white"><strong>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </strong></div>
+
+  <div class="field" style="color:white">
+    <%#= form.label :check_list %>
+    <%#= form.select :check_list_id, options_from_collection_for_select(@check_list, :id, :hazard_type)%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

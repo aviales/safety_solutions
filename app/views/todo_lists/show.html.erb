@@ -1,0 +1,28 @@
+
+<div class="table-responsive shadow text-center"style="background-repeat: no-repeat;background-position: center center;background-size: auto; background-image: url('https://images.pexels.com/photos/2036686/pexels-photo-2036686.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1500');" >    <div class="d-flex p-2">
+  <div class="container" >                  
+    <table class="table table-index">
+      <thead class="thead-dark">
+        <tr class="text-center">
+					 <th scope="col" ><h2 class="todo_list_title" style="color:white"><%= @todo_list.title %></h2></th>
+					<th scope="col"><p class="todo_list_sub_title" style="color:white"><%= @todo_list.description %></p></th>
+ 
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+<div id= "todo_items_wrapper">
+	<%= render @todo_list.todo_items %>
+	<div id="form">
+		<%= render "todo_items/form" %>
+	</div>	
+</div>	
+
+<div class="links">
+	<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
+	<%= link_to 'Delete', todo_list_path(@todo_list), method: :delete, data: { confirm: "Are you sure?" } %> |
+	<%= link_to 'Back', todo_lists_path %>
+
+</div>
+

@@ -1,0 +1,54 @@
+<%= form_with(model: check_list, local: false) do |form| %>
+  <% if check_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(check_list.errors.count, "error") %> prohibited this check_list from being saved:</h2>
+
+      <ul>
+        <% check_list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field" style="color:white">
+    <%= form.label :version %>
+    <%= form.number_field :document_version %>
+  </div>
+
+  <div class="field" style="color:white">
+    <%= form.label :hazard_type %>
+    <%= form.text_field :hazard_type %>
+  </div>
+
+  <div class="field" style="color:white">
+    <%= form.label :inspeccion %>
+    <%= form.select :inspeccion_id, options_from_collection_for_select(@inspeccion, :id, :date)%>
+  </div>
+
+   <h2 style="color:white">Check list Items</h2>
+ 
+  <%= form.fields_for :check_list_items do | item | %>
+    <div class="check_list_items_fields">
+      <div class="fields">
+        <%= item.label "Descripción" %><br>
+        <%= item.text_field :text %>
+      </div>
+    </div>
+  <% end %>
+
+   <h2 style="color:white">work areas </h2>
+ 
+  <%= form.fields_for :work_area do | area | %>
+    <div class="work_area_fields">
+      <div class="fields">
+        <%= area.label "Lugar de Inspeccion" %><br>
+        <%= area.text_field :name %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

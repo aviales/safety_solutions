@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p style="color:white">
+  <strong>document version:</strong>
+  <%= @check_list.document_version %>
+</p>
+
+<p style="color:white">
+  <strong>Hazard type:
+  <%= @check_list.hazard_type %>
+</strong></p>
+<h2><strong>check_list_item</strong></h2>
+
+<% if @check_list.check_list_items.any? %>
+	    <ul>
+		    <% @check_list.check_list_items.each do |item| %>
+		      <li><%= link_to item, item %></li> 
+	      <% end %>
+    	</ul>
+<% else %>
+	      <p><strong>no hay check_list_item</strong></p>
+<% end %>
+<h2><strong>work areas</strong></h2>
+
+<p><strong><%= @check_list.work_area %></strong></p>
+
+
+
+<strong><%= link_to 'Edit', edit_check_list_path(@check_list) %></strong> 
+<strong><%= link_to 'Back', check_lists_path %></strong>

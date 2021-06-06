@@ -1,0 +1,39 @@
+<%= form_with(model: [@project, inspeccion]) do |form| %>
+  <% if inspeccion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(inspeccion.errors.count, "error") %> prohibited this inspeccion from being saved:</h2>
+
+      <ul>
+        <% inspeccion.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div >
+    <h5 style="background-color:white">Puts Inspeccions info:</h5>
+  </div>
+
+  <div class="field" style="color:white">
+    <%= form.label :contractor_id %>
+    <%= form.select :contractor_id, Contractor.pluck( :name, :id ) %>
+  </div>
+  <div class="field" style="color:white">
+    <%= form.label :project_id %>
+    <%= form.select :project_id, Project.pluck( :name, :id ) %>
+  </div>
+    <div class="field"style="color:white">
+    <%= form.label :Inspeccion_date %>
+    <%= form.date_select :date %>
+  </div>
+  <h5 style="background-color:white">Select yours check_lists</h5>
+
+  <div class="field" style="color:white">
+    <%= form.label :check_list_id %>
+       <%= form.collection_check_boxes( :check_list_ids, @check_lists, :id, :hazard_type) %>
+</div>
+ 
+  <div class="actions">
+    <%= form.submit class: 'btn btn-success' %>
+  </div>
+<% end %>

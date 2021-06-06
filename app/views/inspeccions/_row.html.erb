@@ -1,0 +1,9 @@
+<tr id="<%= inspeccion.id %>">
+  <td><strong><%= inspeccion.date %></strong></td>
+  <td><strong><%= inspeccion.contractor.name %></strong> </td>
+  <td><strong><%= inspeccion.project.name %></strong></td>
+  <td><strong><%= inspeccion.check_lists.map {|inspeccion| inspeccion.hazard_type}.join(", ") %></strong></td>
+  <% project = project.nil? ? inspeccion.project : project   %>
+  <td><strong><%= link_to (fa_icon "edit"), edit_project_inspeccion_path(project,inspeccion), class: "btn btn-secondary btn-sm shadow", title: "Editar Inspeccion", remote: true %></strong></td>
+  <td><strong><%= link_to (fa_icon "trash"), [project,inspeccion], method: :delete, data: { confirm: "¿Estas seguro de eliminar esta Inspeccion"}, class: "btn btn-danger btn-sm shadow", title: "Eliminar " %></strong></td>
+</tr>

@@ -1,0 +1,164 @@
+
+
+.top-header .navbar_menu .navbar-collapse ul li a {
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 7px 20px;
+  position: relative;
+  font-weight: 400;
+  overflow: scroll;
+  color: rgb(235, 35, 35);
+}
+
+
+<%# este es el ccss que da margenes a la imagen de fondo /* * */ %>
+body{
+  background-image: url(<%= asset_path 'hard-hat' %>);
+  background-size: cover; 
+	background-position: center;
+	background-attachment: fixed;
+   
+} 
+
+<%# este es el ccss que da margenes al logo a la izquierda y dentro del navbar /* * */ %>
+.logo {
+  width: 100px;
+  height:80px;
+  left: 0px;
+}
+<%# este es el ccss del navbar /* * */ %>
+.navbar_menu{
+  height: 100px;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffff;
+  box-shadow: 5px 0 10px rgba(68, 67, 68, 0.9);
+}
+
+<%#  este es el ccss que da distacia a menu goto y login  /* * */ %>
+.navbar_menu_items{
+  display: flex;
+  list-style: none;
+  margin-right: 90px;
+}
+
+.navbar_menu_items li{
+  border-radius: 3px;
+  margin: 0 5px;
+
+}
+
+.navbar_menu_items li .an{
+  padding: 7px 1px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  text-transform: uppercase;
+  color:rgba(102, 101, 102, 0.9)
+}
+
+.navbar_menu_items li:hover, li.active{
+  background-color: rgba(102, 101, 102, 0.9);
+  transform: .4s;
+}
+
+.btn_menu{
+  margin-right: 30px;
+  font-size: 25px;
+  color:rgba(211, 3, 3, 0.411);
+  cursor: pointer;
+  display: none;
+}
+ul.show {
+  top: 65px;
+
+}
+<%# este es el ccss que da margenes al logo /* * */ %>
+
+
+
+
+
+.avatar-img {
+  width: 4rem;
+  height: 8rem;
+  border-radius: 100%;
+}
+
+
+ .fa-bullhorn:before {
+  content: "\f0a1";
+}
+.card-columns {
+  column-count: 4;
+}
+.card {
+  min-height: 100px;
+}
+
+
+
+ h1{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  display: inline-block; 
+}
+p{
+  color: black;
+
+}
+.btn{
+  background-color: rgba(68, 67, 68, 0.9);
+}
+.table-index{
+  color: white;
+}
+.table-form, .table-show, .form-name, .form-stardate, .finishdate{
+  margin: 0 auto;
+  color: black;
+  max-width: 500px;
+  border-radius: 15px;
+  padding: 30px 30px;
+}
+ul li{
+  text-decoration: none;
+  list-style-type: none;
+
+}
+a{
+  color: black;
+  margin: 0;
+}
+#table {
+  color: black;
+  margin: 20 auto;
+  word-spacing: 85pt; 
+  line-height: 80pt;
+  background-color: white;
+  display: inline-block; 
+}
+<%#//*habia problemas debido a que el margin-top del footer estaba reducido y la linea entre el final se arreglo con padding bottom*// %>
+.footer {
+  text-align: right;
+  background-color: black;
+  margin-top: 200px;
+  width: 100%;
+  height: 75px;
+  position: static;
+  padding-bottom: 100px;
+} 
+.footer-icon {
+ 
+  right: 30px;
+   width: 100%;
+}
+
+
+
+
+.section-home{
+ margin-top: 250px;
+  display: flex;
+}

@@ -1,0 +1,40 @@
+<%= form_with(model: project, local: true) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+        <% project.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div >
+<h5 style="background-color:white">Puts Projects info:</h5>
+</div>
+
+  <div class="field" style="color:white"><strong>
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :project_name  %>
+  </strong></div>
+
+<div class="field" style="color:white"><strong>
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date %>
+ </strong></div>
+<div class="field" style="color:white"><strong>
+    <%= form.label :finish_date %>
+    <%= form.date_select :finish_date %>
+ </strong></div>
+<div class="field" style="color:black"><strong>
+ <%= label_tag 'periodicity_once','Once a week inspeccion' %>
+  <%= check_box_tag 'project[periodicity][]','Once a week inspeccion', checked(project, 'Once a week inspeccion'), id: 'periodicity_once' %>
+  <%= label_tag 'periodicity_biw','Biweekly inspeccion' %>
+  <%= check_box_tag 'project[periodicity][]','Biweekly inspeccion', checked(project, 'Biweekly inspeccion'), id: 'periodicity_biw' %>
+
+ </strong></div>
+<div class="actions" ><strong>
+  <%= form.submit value="Project Create" %>
+</strong></div>
+<% end %>

@@ -1,0 +1,12 @@
+
+
+
+    <tr id="<%= project.id %>">
+      <td><strong><%= project.name %></strong></td>
+      <td><strong><%= project.start_date %></strong></td>
+      <td><strong><%= project.finish_date %></strong></td>
+      <td><strong><%= project.periodicity %></strong></td>
+     
+      <td><strong><%= link_to (fa_icon "edit"), edit_project_path(project), class: "btn btn-secondary btn-sm shadow", title: "Editar proyecto", remote: true %></strong></td>
+      <td><strong><%= link_to (fa_icon "trash"), project, method: :delete, data: { confirm: "¿Estas seguro de eliminar un Proyecto"}, class: "btn btn-danger btn-sm shadow", title: "Eliminar " %></strong></td>
+    </tr>

@@ -1,0 +1,35 @@
+<%= form_with(model: contractor, remote: true) do |form| %>
+  <% if contractor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contractor.errors.count, "error") %> prohibited this contractor from being saved:</h2>
+
+      <ul>
+        <% contractor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <h2 style="background-color:white">Contractor name:</h2>
+  <div class="field" style="color:white">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <h2 style="background-color:white">Contractor types:</h2>
+ 
+  <%= form.select :contractor_type_id, options_from_collection_for_select(@contractor_types, :id, :name)%>
+  <%= form.fields_for :contractor_types do | type | %>
+    <div class="contractor_types_fields">
+      <div class="fields">
+        <%= type.label "Type" %><br>
+        <%= type.text_field :name %>
+      </div>
+    </div>
+  <% end %>
+
+   
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

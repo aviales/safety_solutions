@@ -1,0 +1,84 @@
+{
+  "application.js": "/packs/js/application-8cc87c871e17a51a1b5b.js",
+  "application.js.map": "/packs/js/application-8cc87c871e17a51a1b5b.js.map",
+  "baffle.js": "/packs/js/baffle-4fcc1a0f6d989bac03b1.js",
+  "baffle.js.map": "/packs/js/baffle-4fcc1a0f6d989bac03b1.js.map",
+  "cable.js": "/packs/js/cable-c283b10176472c08c8e7.js",
+  "cable.js.map": "/packs/js/cable-c283b10176472c08c8e7.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-8cc87c871e17a51a1b5b.js"
+      ],
+      "js.map": [
+        "/packs/js/application-8cc87c871e17a51a1b5b.js.map"
+      ]
+    },
+    "baffle": {
+      "js": [
+        "/packs/js/baffle-4fcc1a0f6d989bac03b1.js"
+      ],
+      "js.map": [
+        "/packs/js/baffle-4fcc1a0f6d989bac03b1.js.map"
+      ]
+    },
+    "cable": {
+      "js": [
+        "/packs/js/cable-c283b10176472c08c8e7.js"
+      ],
+      "js.map": [
+        "/packs/js/cable-c283b10176472c08c8e7.js.map"
+      ]
+    },
+    "jquery": {
+      "js": [
+        "/packs/js/jquery-702473917d7b4ebf0e2a.js"
+      ],
+      "js.map": [
+        "/packs/js/jquery-702473917d7b4ebf0e2a.js.map"
+      ]
+    },
+    "lightbox-plus-jquery": {
+      "js": [
+        "/packs/js/lightbox-plus-jquery-aa7173436b557c6d56d0.js"
+      ],
+      "js.map": [
+        "/packs/js/lightbox-plus-jquery-aa7173436b557c6d56d0.js.map"
+      ]
+    },
+    "main": {
+      "js": [
+        "/packs/js/main-9a91fece5bb97bf5ce73.js"
+      ],
+      "js.map": [
+        "/packs/js/main-9a91fece5bb97bf5ce73.js.map"
+      ]
+    },
+    "script": {
+      "js": [
+        "/packs/js/script-7d2c6da05815c0ac65c6.js"
+      ],
+      "js.map": [
+        "/packs/js/script-7d2c6da05815c0ac65c6.js.map"
+      ]
+    },
+    "t": {
+      "js": [
+        "/packs/js/t-1911fc96d078047389a2.js"
+      ],
+      "js.map": [
+        "/packs/js/t-1911fc96d078047389a2.js.map"
+      ]
+    }
+  },
+  "jquery.js": "/packs/js/jquery-702473917d7b4ebf0e2a.js",
+  "jquery.js.map": "/packs/js/jquery-702473917d7b4ebf0e2a.js.map",
+  "lightbox-plus-jquery.js": "/packs/js/lightbox-plus-jquery-aa7173436b557c6d56d0.js",
+  "lightbox-plus-jquery.js.map": "/packs/js/lightbox-plus-jquery-aa7173436b557c6d56d0.js.map",
+  "main.js": "/packs/js/main-9a91fece5bb97bf5ce73.js",
+  "main.js.map": "/packs/js/main-9a91fece5bb97bf5ce73.js.map",
+  "script.js": "/packs/js/script-7d2c6da05815c0ac65c6.js",
+  "script.js.map": "/packs/js/script-7d2c6da05815c0ac65c6.js.map",
+  "t.js": "/packs/js/t-1911fc96d078047389a2.js",
+  "t.js.map": "/packs/js/t-1911fc96d078047389a2.js.map"
+}

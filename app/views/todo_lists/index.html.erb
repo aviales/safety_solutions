@@ -1,0 +1,15 @@
+
+<% @todo_lists.each do |todo_list| %>
+    <div class="index_row clearfix container" style="background-repeat: no-repeat;background-position: center center;background-size: auto; background-image: url('https://images.pexels.com/photos/4161604/pexels-photo-4161604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1450');" >    <div class="d-flex p-2">
+
+        <h2 class="todo_list_title"><strong><%= link_to todo_list.title, todo_list %></strong></h2>
+        <p class="todo_list_sub_title"><strong><%= todo_list.description %></strong></p>
+    </div>
+              <% end %>    
+            
+<div class="links" ><strong>
+  <%= link_to "New Free Style Check List", new_todo_list_path %>
+</strong></div>
+<div class="links3" ><strong>
+<%= link_to 'Back', check_lists_path %>
+</strong></div>
